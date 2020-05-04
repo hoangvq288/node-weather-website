@@ -16,7 +16,7 @@ const msgTwo = document.querySelector('#message-2')
   msgOne.textContent = 'Searching .....'
   msgTwo.textContent = ''
   const address = searchElement.value
-  fetch(`http://localhost:3000/weather?address=${address}`).then(response => {
+  fetch(`/weather?address=${address}`).then(response => {
     response.json().then(data => {
       if(data.error) {
         msgOne.textContent = data.error
